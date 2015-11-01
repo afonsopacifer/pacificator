@@ -1,0 +1,15 @@
+{
+  "name": "pacificator",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Afonso Pacifer",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "pacificator": "index.js"
+  }
+}
