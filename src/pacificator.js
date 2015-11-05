@@ -1,4 +1,9 @@
-exports.pacificate = function(stylesheet) {
+fs = require('fs');
+
+exports.pacificate = function(path) {
+
+  var stylesheet = fs.readFileSync(path, 'utf8');
+
   stylesheet = stylesheet.replace(/\s/g, ""); //Retira todos os espacos em branco e quebras de linha e identacao
   stylesheet = stylesheet.toLowerCase(); //Transforma todos os caracteres para minusculo
   stylesheet = stylesheet.replace(/\'/g, "\""); //Altera todas as ' para "
@@ -11,8 +16,9 @@ exports.pacificate = function(stylesheet) {
   return stylesheet;
 };
 
-exports.pacificateTab = function(stylesheet, amount) {
+exports.pacificateTab = function(path, amount) {
 
+  var stylesheet = fs.readFileSync(path, 'utf8');
   var tabs = "\t".repeat(amount);
 
   stylesheet = stylesheet.replace(/\s/g, ""); //Retira todos os espacos em branco e quebras de linha e identacao
@@ -27,8 +33,9 @@ exports.pacificateTab = function(stylesheet, amount) {
   return stylesheet;
 };
 
-exports.pacificateSpace = function(stylesheet, amount) {
+exports.pacificateSpace = function(path, amount) {
 
+  var stylesheet = fs.readFileSync(path, 'utf8');
   var spaces = " ".repeat(amount);
 
   stylesheet = stylesheet.replace(/\s/g, ""); //Retira todos os espacos em branco e quebras de linha e identacao
