@@ -59,8 +59,14 @@ $ pacificator --help
 var pacificator = require('./pacificator.js');
     path = 'somePath/file.css';
 
-// Pacificate
-var css = pacificator.pacificate(path);
+// Output the css pacificated (By default the indent is with 1 tab)
+var output = pacificator.pacificate(path);
+
+// Output the css pacificated and indent with 1 tab
+var output = pacificator.pacificateTab(path, 1);
+
+// Output the css pacificated and indent with 2 spaces
+var output = pacificator.pacificateSpace(path, 2);
 ```
 
 ## Contributing
