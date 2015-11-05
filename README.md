@@ -1,21 +1,23 @@
 # Pacificator.js
 
-> Pacificate your CSS
+> inspired by [Idiomatic CSS](https://github.com/necolas/idiomatic-css).
 
 ## What does it do?
 
-**Before**
+**Before:**
 ```css
 .class{
 color:#fff;}
 ```
 
-**After**
+**After:**
 ```css
 .class {
   color: #fff;
 }
 ```
+
+[See all rules]().
 
 ## How to install
 
@@ -26,7 +28,39 @@ $ npm install -g pacificator
 ## How to use
 
 ```sh
-$ pacificator style.css
+$ pacificator <input>
+```
+
+## Command Line
+
+```sh
+$ pacificator <input>
+```
+
+```sh
+$ pacificator -t <input>
+```
+
+```sh
+$ pacificator -s <input>
+```
+
+```sh
+$ pacificator --version
+```
+
+```sh
+$ pacificator --help
+```
+
+## Module Usage
+
+```js
+var pacificator = require('./pacificator.js');
+    path = 'somePath/file.css';
+
+// Pacificate
+var css = pacificator.pacificate(path);
 ```
 
 ## Contributing
