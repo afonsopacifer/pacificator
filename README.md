@@ -56,7 +56,7 @@ $ pacificator --help
 ## Module Usage
 
 ```js
-var pacificator = require('./pacificator.js');
+var pacificator = require('pacificator');
     path = 'somePath/file.css';
 
 // Output the css pacificated (By default the indent is with 1 tab)
