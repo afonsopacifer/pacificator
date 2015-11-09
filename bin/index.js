@@ -18,11 +18,11 @@ program
 program.parse(process.argv);
 
 if (program.tabIndent) {
-  var output = pacificator.pacificateTab(path, amount);
-} else if (program.spaceIndent) {
-  var output = pacificator.pacificateSpace(path, amount);
-} else {
-  var output = pacificator.pacificate(path);
+    var output = pacificator.pacificateTab(path, amount);
+  } else if (program.spaceIndent) {
+    var output = pacificator.pacificateSpace(path, amount);
+  } else {
+    var output = pacificator.pacificate(path);
 }
 
 fs.writeFile(path, output);

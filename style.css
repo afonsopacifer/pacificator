@@ -1,9 +1,25 @@
-.class {
-		color: #fff;
+/* simplecomment */
+
+body {
+	background-color: #000;
 }
 
-.class-2 {
-		color: #000;
-		background: url("../bg.jpg");
+#main {
+	margin-top: 10px;
+	color: #fff;
+}
+
+.section {
+	padding: 10px;
+}
+
+/* simplecomment */
+
+.link {
+	border-radius: 50px;
+}
+
+.link:hover {
+	opacity: .7;
 }
 

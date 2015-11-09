@@ -4,7 +4,7 @@
 
 ## What does it do?
 
-*Adds a standard syntax and indentation to css .*
+*Adds a standard syntax and indentation to css.*
 
 **Before pacificate:**
 ```css
