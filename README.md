@@ -6,26 +6,60 @@
 
 *Adds a standard syntax and indentation to css.*
 
-**Before pacificate:**
+**Before:**
 ```css
-.class{
-color:#fff;}
 
-.class_2 {color:#000 ;
-background:url('../bg.jpg');
+/* comment */
+body{
+	background-image: url('../img/bh.jpg');
+
+}
+
+#main  {
+
+margin-top: 10px;
+	color: #FFF;
+}
+
+.section{
+	padding: 10PX;}
+
+/* simplecomment */
+.link {border-radius:50px;
+}
+
+.link:hover{
+        opacity: .7;
 }
 ```
 
-**After pacificate:**
+**After:**
 ```css
-.class {
-  color: #fff;
+/* simplecomment */
+
+body {
+	background-image: url("../img/bh.jpg");
 }
 
-.class-2 {
-  color: #000;
-  background: url("../bg.jpg");
+#main {
+	margin-top: 10px;
+	color: #fff;
 }
+
+.section {
+	padding: 10px;
+}
+
+/* comment */
+
+.link {
+	border-radius: 50px;
+}
+
+.link:hover {
+	opacity: .7;
+}
+
 ```
 
 [See all rules]().
@@ -49,14 +83,14 @@ $ npm install pacificator
 *Output the css pacificated.*
 
 ```sh
-$ pacificator <css-path>
+$ pacificator <path>
 ```
 <hr>
 
 *Output the css pacificated and choose the amount of tabs for indentation.*
 
 ```sh
-$ pacificator -t <css-path> <amount-tabs>
+$ pacificator -t <path> <integer>
 ```
 
 <hr>
@@ -64,7 +98,7 @@ $ pacificator -t <css-path> <amount-tabs>
 *Output the css pacificated and choose the amount of spaces for indentation.*
 
 ```sh
-$ pacificator -s <css-path> <amount-spaces>
+$ pacificator -s <path> <integer>
 ```
 
 <hr>
@@ -100,6 +134,16 @@ var output = pacificator.pacificateTab(path, 1);
 and choose the amount of spaces for indentation. */
 var output = pacificator.pacificateSpace(path, 2);
 ```
+
+## Not supported yet
+
+- [ ] media queries syntax
+- [ ] @charset syntax
+- [ ] Shorthand syntax
+- [ ] Other selectors *(ex: .abc > a)* syntax
+- [ ] Animation syntax
+
+[Report a bug :)](https://github.com/afonsopacifer/pacificator/issues)
 
 ## Contributing
 
