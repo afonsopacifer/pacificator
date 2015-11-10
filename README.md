@@ -24,7 +24,7 @@ margin-top: 10px;
 .section{
 	padding: 10PX;}
 
-/* simplecomment */
+/* comment */
 .link {border-radius:50px;
 }
 
@@ -35,7 +35,7 @@ margin-top: 10px;
 
 **After:**
 ```css
-/* simplecomment */
+/* comment */
 
 body {
 	background-image: url("../img/bh.jpg");
@@ -62,7 +62,7 @@ body {
 
 ```
 
-[See all rules]().
+[See all rules](https://github.com/afonsopacifer/pacificator/blob/master/RULES.md).
 
 ## How to install
 
