@@ -21,7 +21,7 @@ margin-top: 10px;
 	color: #FFF;
 }
 
-.section{
+.main_section{
 	padding: 10PX;}
 
 /* comment */
@@ -46,7 +46,7 @@ body {
 	color: #fff;
 }
 
-.section {
+.main-section {
 	padding: 10px;
 }
 

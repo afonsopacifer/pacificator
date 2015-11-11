@@ -1,25 +1,25 @@
 /* simplecomment */
 
 body {
-	background-image: url("../img/bh.jpg");
+		background-image: url("../img/bh.jpg");
 }
 
 #main {
-	margin-top: 10px;
-	color: #fff;
+		margin-top: 10px;
+		color: #fff;
 }
 
 .section {
-	padding: 10px;
+		padding: 10px;
 }
 
 /* simplecomment */
 
 .link {
-	border-radius: 50px;
-}
+		border-radius: 50px;
+	}
 
 .link:hover {
-	opacity: .7;
+		opacity: .7;
 }
 
