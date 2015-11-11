@@ -21,8 +21,12 @@
   },
   "keywords": [
     "pacificate",
+    "idiomatic",
     "css"
   ],
+  "scripts": {
+    "test": "mocha"
+  },
   "preferGlobal": true,
   "bin": {
     "pacificator": "bin/index.js"
