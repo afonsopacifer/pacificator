@@ -1,4 +1,6 @@
-fs = require('fs');
+'use strict';
+
+var fs = require('fs');
 
 exports.pacificate = function(path) {
 

@@ -27,4 +27,4 @@ if (program.tabIndent) {
 
 fs.writeFile(path, output);
 
-console.log(output);
+console.log('Done! Your CSS was Pacificated successfully.');
