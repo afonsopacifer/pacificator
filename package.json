@@ -1,6 +1,6 @@
 {
   "name": "pacificator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "src/pacificator.js",
   "description": "Adds a standard syntax and indentation to css.",
   "bugs": {

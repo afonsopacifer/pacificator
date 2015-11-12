@@ -6,65 +6,13 @@
 
 *Adds a standard syntax and indentation to css.*
 
-**Before:**
-```css
-
-/* comment */
-body{
-	background-image: url('../img/bh.jpg');
-
-}
-
-#main  {
-
-margin-top: 10px;
-	color: #FFF;
-}
-
-.main_section{
-	padding: 10PX;}
-
-/* comment */
-.link {border-radius:50px;
-}
-
-.link:hover{
-        opacity: .7;
-}
-```
-
-**After:**
-```css
-/* comment */
-
-body {
-	background-image: url("../img/bh.jpg");
-}
-
-#main {
-	margin-top: 10px;
-	color: #fff;
-}
-
-.main-section {
-	padding: 10px;
-}
-
-/* comment */
-
-.link {
-	border-radius: 50px;
-}
-
-.link:hover {
-	opacity: .7;
-}
-
-```
+![](./screenshot.gif)
 
 [See all rules](https://github.com/afonsopacifer/pacificator/blob/master/RULES.md).
 
 ## How to install
+
+Verify if you have [node](http://nodejs.org/) and [npm](https://www.npmjs.org/) installed.
 
 #### Command Line
 
