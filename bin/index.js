@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var pacificator = require('../src/pacificator.js'),
-    fs = require('fs');
+    fs = require('fs'),
     program = require('commander'),
     pkg = require('../package.json');
 

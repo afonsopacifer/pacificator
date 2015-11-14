@@ -17,7 +17,6 @@ describe('Pacification', function(){
         expect = '/* comment */\n\n.test-class:hover {\n\t\t\tbackground-image: url("../bg.jpg");\n}\n\n';
 
     assert.equal(result, expect);
-
   });
 
   it('should return a string pacificated with whitespace', function(){

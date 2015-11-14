@@ -1,1 +1,2 @@
-/*comment*/.TEST_CLASS:hover{background-image:url('../bg.jpg');}
+/*comment*/
+.TEST_CLASS:hover{  background-image: url('../bg.jpg') ; }
