@@ -2,36 +2,40 @@
 
 var fs = require('fs');
 
-exports.pacificate = function(path) {
-  var stylesheet = fs.readFileSync(path, 'utf8'),
-      stylesheet = pacificateSyntax(stylesheet);
+function pacificator() {
 
-  stylesheet = stylesheet.replace(/(.*[\:])/g, "\t$1");       // Adds indentation the texts terminated in :
-  stylesheet = stylesheet.replace(/\t(.*[\:].*[\{])/g, "$1"); // Removes the indentation in all texts  started in : and the followed text terminated in whitespace+{ (for pseudo-classes)
+  this.pacificate = function(path) {
+    var stylesheet = fs.readFileSync(path, 'utf8'),
+        stylesheet = pacificateSyntax(stylesheet);
 
-  return stylesheet;
-};
+    stylesheet = stylesheet.replace(/(.*[\:])/g, "\t$1");       // Adds indentation the texts terminated in :
+    stylesheet = stylesheet.replace(/\t(.*[\:].*[\{])/g, "$1"); // Removes the indentation in all texts  started in : and the followed text terminated in whitespace+{ (for pseudo-classes)
 
-exports.pacificateTab = function(path, amount) {
-  var stylesheet = fs.readFileSync(path, 'utf8'),
-      tabs = "\t".repeat(amount);
+    return stylesheet;
+  };
 
-  stylesheet = pacificateSyntax(stylesheet);
-  stylesheet = stylesheet.replace(/(.*[\:])/g, tabs+"$1");     // Adds indentation the texts terminated in :
-  stylesheet = stylesheet.replace(/\t*(.*[\:].*[\{])/g, "$1"); // Removes the indentation in all texts  started in : and the followed text terminated in whitespace+{ (for pseudo-classes)
+  this.pacificateTab = function(path, amount) {
+    var stylesheet = fs.readFileSync(path, 'utf8'),
+        tabs = "\t".repeat(amount);
 
-  return stylesheet;
-};
+    stylesheet = pacificateSyntax(stylesheet);
+    stylesheet = stylesheet.replace(/(.*[\:])/g, tabs+"$1");     // Adds indentation the texts terminated in :
+    stylesheet = stylesheet.replace(/\t*(.*[\:].*[\{])/g, "$1"); // Removes the indentation in all texts  started in : and the followed text terminated in whitespace+{ (for pseudo-classes)
 
-exports.pacificateSpace = function(path, amount) {
-  var stylesheet = fs.readFileSync(path, 'utf8'),
-      spaces = " ".repeat(amount);
+    return stylesheet;
+  };
 
-  stylesheet = pacificateSyntax(stylesheet);
-  stylesheet = stylesheet.replace(/(.*[\:])/g, spaces+"$1");  // Adds indentation the texts terminated in :
-  stylesheet = stylesheet.replace(/ *(.*[\:].*[\{])/g, "$1"); // Removes the indentation in all texts  started in : and the followed text terminated in whitespace+{ (for pseudo-classes)
+  this.pacificateSpace = function(path, amount) {
+    var stylesheet = fs.readFileSync(path, 'utf8'),
+        spaces = " ".repeat(amount);
 
-  return stylesheet;
+    stylesheet = pacificateSyntax(stylesheet);
+    stylesheet = stylesheet.replace(/(.*[\:])/g, spaces+"$1");  // Adds indentation the texts terminated in :
+    stylesheet = stylesheet.replace(/ *(.*[\:].*[\{])/g, "$1"); // Removes the indentation in all texts  started in : and the followed text terminated in whitespace+{ (for pseudo-classes)
+
+    return stylesheet;
+  };
+
 };
 
 function pacificateSyntax(stylesheet) {
@@ -49,3 +53,5 @@ function pacificateSyntax(stylesheet) {
 
   return stylesheet;
 };
+
+module.exports = new pacificator();

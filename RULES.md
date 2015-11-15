@@ -2,6 +2,13 @@
 
 [<-- Back](https://github.com/afonsopacifer/pacificator/blob/master/README.md)
 
+## Table of contents
+
+- [Syntax](#syntax)
+- [Indentation](#indentation)
+
+## Syntax
+
 Always use double quotes:
 
 ```css
@@ -109,16 +116,36 @@ Use lowercase:
 Use hyphens to separate the names:
 ```css
 /* good */
-.btn_default {
-	background-color: #000;
-	color: #fff;
-}
-
-/* bad */
 .btn-default {
 	background-color: #000;
 	color: #FFF;
 }
+
+/* bad */
+.btn_default {
+	background-color: #000;
+	color: #fff;
+}
 ```
+
+## Indentation
+
+Maintain a consistency in the indentation
+
+```css
+/* good */
+.btn-default {
+	background-color: #000;
+	color: #FFF;
+}
+
+/* bad */
+.btn_default {
+		background-color: #000;
+	color: #fff;
+}
+```
+
+**Note:** Choose from tabs or spaces, and keep the standard. [How to set up the indentation?](https://github.com/afonsopacifer/pacificator/blob/master/README.md#command-line-usage)
 
 [Suggest a new rule ;)](https://github.com/afonsopacifer/pacificator/issues)
