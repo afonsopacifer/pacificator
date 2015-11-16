@@ -2,7 +2,7 @@
 
 > inspired by [Idiomatic CSS](https://github.com/necolas/idiomatic-css).
 
-![Build Status](https://travis-ci.org/afonsopacifer/pacificator.svg)
+![Build Status](https://travis-ci.org/afonsopacifer/pacificator.svg?branch=master)
 
 ## What does it do?
 
