@@ -3,7 +3,8 @@
 var pacificator = require('../src/pacificator.js'),
     fs = require('fs'),
     program = require('commander'),
-    pkg = require('../package.json');
+    pkg = require('../package.json'),
+    amount, path;
 
 program
   .version(pkg.version)

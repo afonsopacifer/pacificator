@@ -5,9 +5,9 @@ var fs = require('fs');
 function pacificator() {
 
   this.pacificate = function(path) {
-    var stylesheet = fs.readFileSync(path, 'utf8'),
-        stylesheet = pacificateSyntax(stylesheet);
+    var stylesheet = fs.readFileSync(path, 'utf8');
 
+    stylesheet = pacificateSyntax(stylesheet);
     stylesheet = stylesheet.replace(/(.*[\:])/g, "\t$1");       // Adds indentation the texts terminated in :
     stylesheet = stylesheet.replace(/\t(.*[\:].*[\{])/g, "$1"); // Removes the indentation in all texts  started in : and the followed text terminated in whitespace+{ (for pseudo-classes)
 
@@ -36,7 +36,7 @@ function pacificator() {
     return stylesheet;
   };
 
-};
+}
 
 function pacificateSyntax(stylesheet) {
   stylesheet = stylesheet.replace(/\s/g, "");                 // Removes all whitespace, indentation and line breaks.
@@ -52,6 +52,6 @@ function pacificateSyntax(stylesheet) {
   stylesheet = stylesheet.replace(/\}/g, "\}\n\n");           // Adds two line break after the }
 
   return stylesheet;
-};
+}
 
 module.exports = new pacificator();
