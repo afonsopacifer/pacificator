@@ -2,7 +2,7 @@
   "name": "pacificator",
   "description": "Adds a standard syntax and indentation to css.",
   "homepage": "https://github.com/afonsopacifer/pacificator",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "Afonso Pacifer",
