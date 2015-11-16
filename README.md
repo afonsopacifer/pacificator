@@ -2,13 +2,15 @@
 
 > inspired by [Idiomatic CSS](https://github.com/necolas/idiomatic-css).
 
+![Build Status](https://travis-ci.org/afonsopacifer/pacificator.svg)
+
 ## What does it do?
 
 *Adds a standard syntax and indentation to css.*
 
 ![](./screenshot.gif)
 
-[See all rules](https://github.com/afonsopacifer/pacificator/blob/master/RULES.md).
+[See all supported Rules](https://github.com/afonsopacifer/pacificator/blob/master/RULES.md).
 
 ## How to install
 
