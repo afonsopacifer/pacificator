@@ -1,35 +1,39 @@
 {
   "name": "pacificator",
-  "version": "0.2.0",
-  "main": "src/pacificator.js",
   "description": "Adds a standard syntax and indentation to css.",
+  "homepage": "https://github.com/afonsopacifer/pacificator",
+  "version": "0.2.0",
+  "license": "MIT",
+  "author": {
+    "name": "Afonso Pacifer",
+    "email": "afonsopacifer@live.com",
+    "url": "http://afonsopacifer.com"
+  },
   "bugs": {
     "url": "https://github.com/afonsopacifer/pacificator/issues"
-  },
-  "homepage": "https://github.com/afonsopacifer/pacificator",
-  "author": "Afonso Pacifer",
-  "license": "MIT",
-  "dependencies": {
-    "commander": "^2.9.0"
-  },
-  "devDependencies": {
-    "jshint": "^2.8.0",
-    "mocha": "^2.2.3"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/afonsopacifer/pacificator"
   },
   "keywords": [
-    "pacificate",
+    "pacificator",
     "idiomatic",
     "css"
   ],
+  "preferGlobal": true,
+  "main": "src/pacificator.js",
+  "bin": {
+    "pacificator": "bin/index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
   "scripts": {
     "test": "mocha"
   },
-  "preferGlobal": true,
-  "bin": {
-    "pacificator": "bin/index.js"
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.3"
   }
 }
