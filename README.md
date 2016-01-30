@@ -99,6 +99,6 @@ var output = pacificator.pacificateSpace(path, 2);
 
 Want to contribute? [Follow these recommendations](https://github.com/afonsopacifer/pacificator/blob/master/CONTRIBUTING.md).
 
-## Licence
+## License
 
-[MIT Licence](https://github.com/afonsopacifer/pacificator/blob/master/LICENCE.md) © [Afonso Pacifer](http://afonsopacifer.com/)
+[MIT License](https://github.com/afonsopacifer/pacificator/blob/master/LICENSE.md) © [Afonso Pacifer](http://afonsopacifer.com/)
