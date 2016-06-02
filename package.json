@@ -27,13 +27,14 @@
     "pacificator": "bin/index.js"
   },
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "css": "^2.2.1"
   },
   "scripts": {
     "test": "mocha"
   },
   "devDependencies": {
     "jshint": "^2.8.0",
-    "mocha": "^2.2.3"
+    "mocha": "^2.5.3"
   }
 }

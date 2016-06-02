@@ -1,17 +1,62 @@
 'use strict';
 
 var fs = require('fs');
+var css = require('css');
 
 function pacificator() {
 
   this.pacificate = function(path) {
     var stylesheet = fs.readFileSync(path, 'utf8');
 
-    stylesheet = pacificateSyntax(stylesheet)
-                 .replace(/(.*[\:])/g, "\t$1")        // Adds indentation the texts terminated in :
-                 .replace(/\t(.*[\:].*[\{])/g, "$1"); // Removes the indentation in all texts  started in : and the followed text terminated in whitespace+{ (for pseudo-classes)
+    // get AST
+    var ast = css.parse(stylesheet);
 
-    return stylesheet;
+    // rules
+    var rules = ast.stylesheet.rules;
+
+    // rules iteration
+    rules.forEach(pacificateRules)
+
+    function pacificateRules(rule) {
+
+      // selectors pacificate
+      console.log(rule.selectors);
+      rule.selectors = [
+        rule.selector.join(",\n")
+                     .toLowerCase()
+                     .replace(/_/g, "-") // Change all _ to -
+      ];
+
+      // declarations
+      var declarations = rule.declarations;
+
+      // declarations iteration
+      declarations.forEach(pacificateDeclarations)
+
+      function pacificateDeclarations(declaration) {
+
+        // property pacificate
+        console.log(declaration.property);
+        declaration.property = [
+          declaration.property.toString()
+                              .toLowerCase()
+        ];
+
+        // value pacificate
+        console.log(declaration.value);
+        declaration.property = [
+          declaration.property.toString()
+                              .toLowerCase()
+        ];
+
+      }
+
+    }
+
+    // stringify
+    var string = css.stringify(ast);
+
+    return string;
   };
 
   this.pacificateTab = function(path, amount) {
